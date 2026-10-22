@@ -2,20 +2,30 @@
 #include <locale.h>
 
 int main(void)
-
 {
+    setlocale(LC_ALL, "");
 
-	setlocale(LC_ALL, "");
-	int n;
+    int n;
 
-	printf("diz um número \n");
-	scanf("%d", &n);
+    do
+    {
+        printf("Diz um número\n");
+        scanf("%i", &n);
 
-	for (int i = 1; i <= 10; i++)
+                     
+      
+        if (n % 3 == 0 && n != 0)
+        {
+            printf("O número é múltiplo de 3\n");
+        }
+        if (n% 5 == 0 && n != 0)
+        {
+            printf("O número é múltiplo de 5\n");
+        }
 
-	{
-		printf("%d x %d = %d\n", numero, i, numero * i);
+    } while (n!= 0);
 
-	}
-	return 0;
+    printf("Digitou 0 - vai sair do programa");
+
+    return 0;
 }
